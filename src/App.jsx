@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 const steps = [
     {
@@ -54,20 +55,8 @@ function App() {
                 </div>
 
                 <div className="flex justify-between">
-                    <button
-                        type="button"
-                        onClick={handlePrevious}
-                        className="bg-rose-400 text-white px-4 py-2 rounded-full font-medium text-sm transform active:scale-95 transition-all"
-                    >
-                        Previous
-                    </button>
-                    <button
-                        type="button"
-                        onClick={handleNext}
-                        className="bg-rose-400 text-white px-4 py-2 rounded-full font-medium text-sm transform active:scale-95 transition-all"
-                    >
-                        Next
-                    </button>
+                    <Button label="Previous" onClick={handlePrevious} />
+                    <Button label="Next" onClick={handleNext} />
                 </div>
             </div>
         </div>
