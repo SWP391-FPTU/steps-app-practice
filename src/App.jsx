@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button"; // Import the new Button component
 
 const steps = [
     {
@@ -58,20 +59,8 @@ function App() {
 
                 {/* Các nút điều khiển */}
                 <div className="flex items-center justify-between">
-                    <button
-                        type="button"
-                        onClick={goToPreviousStep}
-                        className="px-5 py-2 bg-green-500 text-white font-medium rounded-3xl text-sm active:translate-y-0.5 transition-all"
-                    >
-                        Previous
-                    </button>
-                    <button
-                        type="button"
-                        onClick={goToNextStep}
-                        className="px-5 py-2 bg-green-500 text-white font-medium rounded-3xl text-sm active:translate-y-0.5 transition-all"
-                    >
-                        Next
-                    </button>
+                    <Button onClick={goToPreviousStep} label="Previous" />
+                    <Button onClick={goToNextStep} label="Next" />
                 </div>
             </div>
         </div>
